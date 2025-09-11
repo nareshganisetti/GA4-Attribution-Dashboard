@@ -8,4 +8,4 @@ SELECT
   CONCAT(traffic_source.source, '/', traffic_source.medium) AS channel,
   ecommerce.purchase_revenue
 FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*`
-WHERE _TABLE_SUFFIX BETWEEN '20210118' AND '20210131';
+WHERE _TABLE_SUFFIX BETWEEN '20210101' AND '20210131';
