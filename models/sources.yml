@@ -6,3 +6,9 @@ sources:
     schema: attribution_test
     tables:
       - name: stg_events
+
+  - name: src_stg
+    database: summer-nucleus-471608-c4
+    schema: dbt_gnaresh
+    tables:
+      - name: int_user_ranks    
