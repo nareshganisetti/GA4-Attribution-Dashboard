@@ -123,5 +123,5 @@ dbt test
 
 * **Naresh Ganisetti** (Data Engineer)
 * Skills: BigQuery, dbt, SQL, Looker Studio, Python (for streaming)
-[Linkedin](www.linkedin.com/in/naresh-g-20465a166)
+[Linkedin](https://www.linkedin.com/in/naresh-g-20465a166)
 
