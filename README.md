@@ -9,7 +9,10 @@ The results are visualized in **Looker Studio** to provide marketing and product
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Architecture 
+
+![Architecture](Architecture.png)
+
 1. **Data Source**  
    - GA4 event export dataset (`bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*` or your GA4 export).  
 
