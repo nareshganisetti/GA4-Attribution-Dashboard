@@ -5,12 +5,24 @@ sources:
     database: summer-nucleus-471608-c4
     schema: attribution_test
     tables:
-      - name: stg_events
+      - name: stg_events   
 
   - name: src_stg
     database: summer-nucleus-471608-c4
     schema: dbt_gnaresh
-    tables:
+    tables:  
+      - name: streaming_data
+        columns:
+          - name: user_pseudo_id
+            description: primary key          
+            tests:
+              - not_null
+          - name: channel
+            description: primary key          
+            tests:
+              - not_null   
+              - unique
+      
       - name: int_user_ranks 
       - name: mart_first_click
-      - name: mart_last_click   
+      - name: mart_last_click         
