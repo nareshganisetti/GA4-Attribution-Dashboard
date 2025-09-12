@@ -16,3 +16,12 @@ medium,
 last_click_conversions as conversions,
 type
 from {{ source('src_stg','mart_last_click') }}
+union all
+SELECT
+ user_pseudo_id ,
+  channel ,
+  source ,
+  medium ,
+  click_conversions ,
+  type 
+  from {{ source('src_stg','streaming_data')}}
