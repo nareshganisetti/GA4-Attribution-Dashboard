@@ -97,6 +97,34 @@ dbt test
   * 📈 Conversion counts by attribution model.
   * 📊 Channel contribution comparison.
 
+📊 Looker Studio Report [Dashboard Link](https://lookerstudio.google.com/embed/reporting/b59ec04d-4d87-42cb-99f5-dada4af4cbce/page/eP1XF)
+
+This Looker Studio report provides an interactive attribution dashboard built on top of BigQuery and dbt models. The report is designed to help marketing and analytics teams understand user journeys and conversion credit allocation across different channels.
+
+Key Features:
+
+**Data Sources**
+
+GA4 Public Dataset (exported to BigQuery)
+
+Sample Streaming Data (ingested in real-time to BigQuery)
+
+dbt-transformed models (staging, Mart and output layers)
+
+**Dashboard Views**
+
+Channel Performance Overview → Breakdown of conversions by channel across attribution models.
+
+User Journey Insights → Comparison of first-click vs. last-click paths.
+
+**Business Value**
+
+Compare attribution models to understand marketing ROI.
+
+Identify undervalued channels in last-click reporting by analyzing first-click contributions.
+
+Enable data-driven budget allocation across campaigns.
+
 ---
 
 ## 🧪 Testing & Data Quality
