@@ -1,11 +1,28 @@
 
-# dna_dbt
-
 # 🎯 GA4 Attribution Project
 
-## 📌 Overview
-This project implements **First-Click** and **Last-Click Attribution** modeling on **Google Analytics 4 (GA4) event data** using **BigQuery** and **dbt**.  
-The results are visualized in **Looker Studio** to provide marketing and product teams with insights into user journeys and conversion touchpoints.  
+## 📌 Project Overview
+
+This project demonstrates how to build a **GA4 Attribution Pipeline** using **BigQuery, dbt, and Looker Studio**.
+
+* **Data Ingestion**
+
+  * GA4 sample dataset (batch data)
+  * Real-time event data (streaming into BigQuery)
+
+* **Data Transformation (dbt)**
+
+  * Staging models to clean and standardize GA4 events
+  * Attribution models to compute **First-Click** and **Last-Click** conversions
+  * Output models that serve as a single source of truth for reporting
+
+* **Data Visualization (Looker Studio)**
+
+  * Interactive dashboard comparing first-click vs last-click attributions
+  * Channel performance, conversion trends, and user journey insights
+
+✅ With this setup, you can understand how different channels contribute to conversions, compare attribution models, and make **data-driven marketing decisions**.
+ 
 
 ---
 
