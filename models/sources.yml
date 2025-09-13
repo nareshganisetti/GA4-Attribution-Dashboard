@@ -5,7 +5,14 @@ sources:
     database: summer-nucleus-471608-c4
     schema: attribution_test
     tables:
-      - name: stg_events   
+      - name: stg_events
+        columns:
+          - name: user_pseudo_id
+            tests:  
+              - not_null  
+          - name: event_timestamp
+            tests:  
+              - not_null                
 
   - name: src_stg
     database: summer-nucleus-471608-c4
@@ -18,11 +25,14 @@ sources:
             tests:
               - not_null
           - name: channel
-            description: primary key          
+            description: combination of source and medium columns              
             tests:
               - not_null   
               - unique
+              - accepted_values:
+                   values: ['(direct)/(none)', '(data deleted)/(data deleted)']              
       
       - name: int_user_ranks 
       - name: mart_first_click
-      - name: mart_last_click         
+      - name: mart_last_click  
+      - name: attributions_final       
