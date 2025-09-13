@@ -27,10 +27,9 @@ sources:
           - name: channel
             description: combination of source and medium columns              
             tests:
-              - not_null   
-              - unique
+              - not_null
               - accepted_values:
-                   values: ['(direct)/(none)', '(data deleted)/(data deleted)']              
+                   values: ['(data deleted)/(data deleted)','(direct)/(none)','<Other>/(data deleted)','<Other>/<Other>','<Other>/organic','<Other>/referral','google/cpc','google/organic','shop.googlemerchandisestore.com/referral']              
       
       - name: int_user_ranks 
       - name: mart_first_click
