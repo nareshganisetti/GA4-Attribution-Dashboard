@@ -1,0 +1,4 @@
+selectors: 
+  - name : final_union_job
+    definition:
+      '+attributions_final'
