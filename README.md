@@ -45,6 +45,18 @@ This project demonstrates how to build a **GA4 Attribution Pipeline** using **Bi
      - Conversion counts(purchases) by Click(First and Last). 
 
 ---
+## 🧠 Assumptions  
+
+- GA4 dataset (`bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*`) is representative of real-world e-commerce event tracking.  
+- Event timestamps are reliable and can be used for attribution ordering.  
+- Streaming ingestion to BigQuery will maintain event order without significant delays.   
+- Looker Studio is connected directly to the output models for visualization.   
+- Lookback window: 30 days for attribution (common default; adjust if needed).
+- Identity resolution: Use user_pseudo_id as the user identifier.
+- Tie-breakers: Use the earliest/latest timestamp for first/last click in case of ties.
+- Channel breakdown: Based on traffic_source.medium and traffic_source.source.
+- Deduplication/idempotency: Use event_id or a generated hash of event data to avoid duplicates.
+- Latency: Streaming inserts to BigQuery are available for query within ~1-5 second
 
 ## ⚙️ Setup Instructions
 
@@ -106,6 +118,8 @@ dbt test
 ├── README.md                   # Project documentation
 └── dbt_project.yml             # Project config
 ```
+## dbt lineage
+<img width="2155" height="1084" alt="image" src="https://github.com/user-attachments/assets/a3dcec2f-0a26-415a-9fc1-8d5936aed433" />
 
 ---
 
